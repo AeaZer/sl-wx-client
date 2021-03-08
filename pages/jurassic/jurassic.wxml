@@ -1,0 +1,16 @@
+<!--pages/jurassic/jurassic.wxml-->
+<view>
+<view class="middle" >
+  <view class="po" >
+    <view>
+      <image class="middle_image" src="../../static/icons/{{userid_server=='illegal'? 'jurassicFail':'jurassicSuccess'}}.png"></image>
+    </view>
+    <view class="font_s">
+      身份验证中...
+    </view>
+   
+  </view>
+
+</view>
+
+</view>

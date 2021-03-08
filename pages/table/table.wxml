@@ -1,0 +1,96 @@
+<wxs module="filters" src="formatData.wxs"></wxs>
+<view class="pageSapce">
+    <view class="section">
+        <picker mode="date" value="{{date}}" start="2021-01-01" end="2050-09-01" bindchange="bindDateChange">
+            <view class="picker">
+                日期选择: {{date}}
+            </view>
+        </picker>
+    </view>
+    <!--表格-->
+    <view class="divLine"></view>
+    <view class="table ">
+        <view class="tr thColor">
+            <view class="th">组织</view>
+            <view class="th">日销售</view>
+            <view class="th ">月销售</view>
+        </view>
+        <!-- 表格的内容主体 -->
+        <view class="table-wrap">
+            <view class="tr ">
+                <view class="td" bg>总销售</view>
+                <view class="td">{{day_total}}</view>
+                <view class="td">{{month_total}}</view>
+            </view>
+            <view wx:for="{{listData}}" wx:key="{{index}}" wx:for-index="indus">
+                <view class="tr" data-indus='{{indus}}' bindtap="click_indus">
+                    <view class="td">{{item.industries}}
+                        <image src="../../static/icons/{{showSecond == true&&indus==index_flag ? 'down':'up'}}.png"></image>
+                    </view>
+                    <view class="td">{{filters.toFix(item.daySale_1,2)}}</view>
+                    <view class="td">{{filters.toFix(item.monthSale_1,2)}}</view>
+                </view>
+                <view wx:for="{{item.colSecs}}" wx:for-item="colSec" wx:key="index" wx:for-index="second">
+                    <view class="tr bgS" data-second='{{second}}' data-indus='{{indus}}' bindtap='click_second'
+                          wx:if="{{showSecond == true&&indus==index_flag}}">
+                        <view class="td">{{colSec.secondLevel}}
+                            <image src="../../static/icons/{{showRoom == true&&second==index_second ? 'down':'up'}}.png"></image>
+                        </view>
+                        <view class="td">{{filters.toFix(colSec.daySale_2,2)}}</view>
+                        <view class="td">{{filters.toFix(colSec.monthSale_2,2)}}</view>
+                    </view>
+
+
+                    <view wx:for="{{colSec.colRooms}}" wx:for-item="Room" wx:key="index" wx:for-index="room">
+                        <view class="tr bgR" data-room='{{room}}' data-second='{{second}}' data-indus='{{indus}}'
+                              wx:if="{{showRoom == true&&indus==index_flag&&second==index_second}}"
+                              bindtap='click_room'>
+                            <view class="td">{{Room.saleRoom}}</view>
+                            <view class="td">{{filters.toFix(Room.daySale_3,2) }}</view>
+                            <view class="td">{{filters.toFix(Room.monthSale_3,2)}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="badge" bindtap="open">
+        <view>
+            <image class="badge_image" src="../../static/icons/intro.png"/>
+        </view>
+    </view>
+
+    <i-modal title="操作说明" visible="{{visible}}" bind:ok="handleClose1" show-cancel="{{cancel}}">
+        <view wx:for="{{intro}}">
+            <view>{{item}}</view>
+        </view>
+    </i-modal>
+
+
+    <view class="messLocation" wx:if="{{count!=0}}">
+        <i-badge count="{{count}}">
+            <i-button type="ghost" bindtap="handleSuccess">
+                <view>
+                    <image class="badge_image" src="../../static/icons/messages.png"/>
+                </view>
+            </i-button>
+        </i-badge>
+    </view>
+    <i-message id="message"/>
+
+    <i-grid>
+        <i-grid-item i-class="item">
+            <i-spin fix wx:if="{{ spinShow }}" custom>
+                <view>Loading...</view>
+            </i-spin>
+        </i-grid-item>
+    </i-grid>
+
+    <view  wx:if="{{notice_visible}}">
+        <i-notice-bar icon="systemprompt" closable >
+            销售业绩数据已更新至：{{maxTime}}
+        </i-notice-bar>
+    </view>
+
+</view>

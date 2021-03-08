@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/jurassic/jurassic",
+    "pages/table/table",
+    "dist/seltdefine/model",
+    "pages/Error/Error"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "上海三联集团",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 5000
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

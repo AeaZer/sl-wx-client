@@ -1,0 +1,22 @@
+<!--pages/Error/Error.wxml-->
+<view class="contain">
+  <view class="center red">
+    <view wx:if="{{environment==1}}">
+      对不起，你没有权限使用此小程序。
+    </view>
+    <view wx:else>
+      请在企业微信中使用此小程序。
+    </view>
+  </view>
+  <view>
+      <view class="divLine"></view>
+    </view>
+  <view class="font">
+    <view class="center">
+      上海三联集团有限公司
+    </view>
+    <view>
+      专业经营钟表、眼镜、照相器材零售，批发企业集团，旗下五大品牌亨达利、亨得利、吴良材、茂昌、冠龙均为闻名遐迩的百年老字号。
+    </view> 
+  </view>
+</view>
