@@ -57,7 +57,7 @@ Page({
                           }
                           else{
                             wx.redirectTo({
-                              url: '../table/table'
+                              url: '../table/table?define=1'
                             })
                           }
                         },

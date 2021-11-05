@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="955513c5-8983-46ea-a70e-2a66299caea5" name="Default Changelist" comment="" />
+    <list default="true" id="955513c5-8983-46ea-a70e-2a66299caea5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Error/Error.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Error/Error.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/jurassic/jurassic.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jurassic/jurassic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/table/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/table/table.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,11 +41,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SL_YSpro" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="955513c5-8983-46ea-a70e-2a66299caea5" name="Default Changelist" comment="" />
@@ -79,10 +89,11 @@
       <workItem from="1612597348596" duration="1531000" />
       <workItem from="1613106140977" duration="29000" />
       <workItem from="1613106485132" duration="164000" />
+      <workItem from="1622620731471" duration="216000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
 </project>

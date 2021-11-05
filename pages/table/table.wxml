@@ -13,7 +13,7 @@
         <view class="tr thColor">
             <view class="th">组织</view>
             <view class="th">日销售</view>
-            <view class="th ">月销售</view>
+            <view class="th">月销售</view>
         </view>
         <!-- 表格的内容主体 -->
         <view class="table-wrap">
@@ -61,12 +61,27 @@
         </view>
     </view>
 
-    <i-modal title="操作说明" visible="{{visible}}" bind:ok="handleClose1" show-cancel="{{cancel}}">
-        <view wx:for="{{intro}}">
-            <view>{{item}}</view>
-        </view>
-    </i-modal>
+    <view class="badge-intro" >
+        <i-modal title="操作说明" visible="{{visible}}" bind:ok="handleClose1" show-cancel="{{cancel}}">
+            <view wx:for="{{intro}}">
+                <view>{{item}}</view>
+            </view>
+        </i-modal>
+    </view>
 
+    <toast hidden="{{hidden}}" duration="2000" bindchange="toastHide">
+        这是toast
+    </toast>
+
+    <!-- 按钮 -->
+    <view class="button-sp-area" id="buttonContainer">
+        <button bindtap="weekbtn" type="{{type1}}" size="mini">近1周</button>
+        <button bindtap="monthbtn" type="{{type2}}" size="mini">1个月</button>
+    </view>
+    <!-- 折线图 -->
+    <view class="echarts-container">
+        <ec-canvas id="mychart" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+    </view>
 
     <view class="messLocation" wx:if="{{count!=0}}">
         <i-badge count="{{count}}">
@@ -92,5 +107,8 @@
             销售业绩数据已更新至：{{maxTime}}
         </i-notice-bar>
     </view>
+
+
+
 
 </view>
